@@ -20,6 +20,24 @@ export function App(props) {
                 Sign Up
             </Link>
         </button> 
+
+        <button>
+            <Link to={"/games"}>
+                Chess Game
+            </Link>
+        </button>
+
+        <button>
+            <Link to={"/dashboard"}>
+                Dashboard
+            </Link>
+        </button> 
+
+        <button>
+            <Link to={"/chessboard"}>
+                Chessboard
+            </Link>
+        </button> 
         
         <div style={{width: 1000, height: 450 }}>
             <Chart

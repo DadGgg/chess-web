@@ -12,6 +12,7 @@ export function Accounts(props) {
         Welcome, {account.username} - {account.id}
     </h1>;
     return <div>
+        {!!account.error && <label>{account.error}</label>}
         {!!account.username && header}
         <label>Username:</label><input type="text" value={username} onChange={e => {
             setUsername(e.target.value);
@@ -27,3 +28,4 @@ export function Accounts(props) {
         </button>
     </div>
 }
+

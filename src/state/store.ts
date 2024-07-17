@@ -1,11 +1,15 @@
 import { configureStore } from '@reduxjs/toolkit';
 import appSlice from './appSlice';
-import accountsSlice from './side-effects/accountsSlice';
+import accountsSlice from './accountsSlice';
+import gamesSlice from './gamesSlice';
+import chessboardSlice from './chessboardSlice';
 
 export const store = configureStore({
   reducer: {
     app: appSlice.reducer,
-    account: accountsSlice.reducer
+    account: accountsSlice.reducer,
+    game: gamesSlice.reducer,
+    chessboard: chessboardSlice.reducer
   }
 });
 

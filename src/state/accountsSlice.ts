@@ -4,13 +4,14 @@ type AccountState = {
   id: number | null;
   username: string;
   password: string;
+  error: string;
 }
-
 
 const initialState: AccountState = {
   id: null,
   username: "",
-  password: ""
+  password: "",
+  error: ""
 }
 
 const accountsSlice = createSlice({
@@ -21,10 +22,13 @@ const accountsSlice = createSlice({
       state.id = action.payload.id;
       state.username = action.payload.username;
       state.password = action.payload.password;
+    },
+    accountCreationFailed(state, action: PayloadAction<string>) {
+      state.error = action.payload;
     }
   }
 });
 
-export const { accountCreated } = accountsSlice.actions;
+export const { accountCreated, accountCreationFailed } = accountsSlice.actions;
 
 export default accountsSlice;
