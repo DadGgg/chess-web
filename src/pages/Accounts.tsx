@@ -14,7 +14,8 @@ export function Accounts(props) {
     return <div>
         {!!account.error && <label>{account.error}</label>}
         {!!account.username && header}
-        <label>Username:</label><input type="text" value={username} onChange={e => {
+        <label>Username:</label>
+        <input type="text" value={username} onChange={e => {
             setUsername(e.target.value);
         }} />
         <label>Password:</label><input type="text" value={password} onChange={e => {

@@ -5,7 +5,6 @@ type GameState = {
   name: string;
 }
 
-
 const initialState: GameState = {
   id: null,
   name: ""

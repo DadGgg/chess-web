@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Chart } from "../components/Chart";
 import { data, velocityInFreeFall } from "./data";
-
 import { useAppSelector, useAppDispatch } from '../state/hooks'
 import { todoAdded, todoToggled } from '../state/appSlice'
 import { loadData } from "../state/side-effects/appThunk";
@@ -13,11 +12,22 @@ export function App(props) {
     const todos = useAppSelector(state => state.app.todos);
     const exampleData = useAppSelector(state => state.app.exampleData);
     const dispatch = useAppDispatch();
+    const reduxState = useAppSelector(s => s.practice.input);
     return <div>
         <h1>Welcome to our website!</h1>
+
+        <h2>
+            {reduxState}
+        </h2>
         <button>
             <Link to={"/accounts"}>
-                Sign Up
+                Accounts
+            </Link>
+        </button> 
+
+        <button>
+            <Link to={"/practice"}>
+                Practice Page
             </Link>
         </button> 
 

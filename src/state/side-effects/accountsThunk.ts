@@ -11,7 +11,8 @@ export const createAccount = (username: string, password: string) => {
         }
         try {
             const response = await axios.post("http://localhost:3000/accounts", newUser);
-            dispatch(accountCreated(response.data)); 
+            const action = accountCreated(response.data);
+            dispatch(action); 
         } catch(error: any) {
             dispatch(accountCreationFailed(error.response.data.message)) 
         }

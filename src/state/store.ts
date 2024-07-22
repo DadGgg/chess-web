@@ -3,13 +3,16 @@ import appSlice from './appSlice';
 import accountsSlice from './accountsSlice';
 import gamesSlice from './gamesSlice';
 import chessboardSlice from './chessboardSlice';
+import Practice from '../pages/Practice';
+import practiceSlice from './practiceSlice';
 
 export const store = configureStore({
   reducer: {
     app: appSlice.reducer,
     account: accountsSlice.reducer,
     game: gamesSlice.reducer,
-    chessboard: chessboardSlice.reducer
+    chessboard: chessboardSlice.reducer,
+    practice: practiceSlice.reducer,
   }
 });
 

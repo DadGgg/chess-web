@@ -6,6 +6,7 @@ import Chessboard from "./pages/Chessboard";
 import Games from "./pages/Games";
 import BarGraph from "./components/BarGraph";
 import { Accounts } from "./pages/Accounts";
+import Practice from "./pages/Practice";
 
 export function AppRouter() {
     const router = createBrowserRouter(createRoutesFromElements(<>
@@ -15,6 +16,7 @@ export function AppRouter() {
         <Route element={<BarGraph/>} path="/bar-graph"/>
         <Route element={<Accounts/>} path="/accounts"/>
         <Route element={<Games/>} path="/games"/>
+        <Route element={<Practice/>} path="/practice"/>
     </>));
 
     return <RouterProvider router={router}/>;
